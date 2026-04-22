@@ -19,22 +19,22 @@ This backend is a small FastAPI service that answers student questions using a G
 
 1. Create and activate a virtual environment.
 
-```powershell
+```bash
 cd backend
 python -m venv .venv
-.venv\Scripts\Activate.ps1
+source .venv/bin/activate
 ```
 
 2. Install dependencies.
 
-```powershell
+```bash
 pip install -r requirements.txt
 ```
 
 3. Create your environment file.
 
-```powershell
-Copy-Item .env.example .env
+```bash
+cp .env.example .env
 ```
 
 4. Add your API key to `.env`.
@@ -47,7 +47,7 @@ The app also checks `GOOGLE_API_KEY` and `OPENAI_API_KEY`, but the current backe
 
 ## Run the Server
 
-```powershell
+```bash
 uvicorn main:app --reload
 ```
 
